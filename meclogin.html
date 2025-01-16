@@ -1,0 +1,175 @@
+<html>
+ <head>
+  <title>
+   RoadSide Helpers - Mechanic Login
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: none;
+            padding: 0;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 20px rgba(30,60,114,0.2);
+        }
+        .header img:hover {
+            transform: scale(1.05);
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 32px;
+            margin: 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+        .form-group {
+            margin: 25px 0;
+            position: relative;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px 45px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            background: #ffffff;
+        }
+        .form-group input:focus {
+            border-color: #1e3c72;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(30,60,114,0.1);
+        }
+        .form-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 20px;
+        }
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-login {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(30,60,114,0.2);
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(30,60,114,0.3);
+        }
+        .btn-reset {
+            background: transparent;
+            color: #1e3c72;
+            border: 2px solid #1e3c72;
+        }
+        .btn-reset:hover {
+            background: rgba(30,60,114,0.05);
+        }
+        .footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #4a5568;
+            font-size: 15px;
+        }
+        .footer a {
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+        .footer a:hover {
+            color: #2a5298;
+            border-bottom: 2px solid #2a5298;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img alt="RoadSide Helpers Logo" src="./cartoon-mechanic-clipart-3.png"/>
+    <h1>
+     Mechanic Portal
+    </h1>
+   </div>
+   <div class="form-group">
+    <i class="fas fa-user">
+    </i>
+    <input placeholder="Enter your mechanic ID" type="text"/>
+   </div>
+   <div class="form-group">
+    <i class="fas fa-lock">
+    </i>
+    <input placeholder="Enter your password" type="password"/>
+   </div>
+   <button class="btn btn-login" onclick="window.location.href='mecprofile.html'">
+    Login
+   </button>
+   <button class="btn btn-reset">
+    Reset Password
+   </button>
+   <div class="footer">
+    New mechanic? <a href="#">Register here</a>
+   </div>
+  </div>
+ </body>
+</html>

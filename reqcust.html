@@ -1,0 +1,273 @@
+<html>
+ <head>
+  <title>
+   Professional Auto Services
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 3px solid rgba(255,255,255,0.8);
+            transition: transform 0.3s ease;
+        }
+        .header img:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+        .container {
+            padding: 40px;
+            text-align: left;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 500px;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: fixed;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .container h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #1e3c72;
+            position: relative;
+        }
+        .container h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            background-color: #f8fafc;
+            padding: 15px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .form-group:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .form-group label {
+            display: inline-block;
+            width: 120px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #1e3c72;
+            box-shadow: 0 0 0 2px rgba(30,60,114,0.1);
+        }
+        .form-group span {
+            font-size: 16px;
+            color: #4a5568;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e3c72;
+            box-shadow: 0 0 0 2px rgba(30,60,114,0.1);
+        }
+        .buttons {
+            margin-top: 30px;
+            text-align: center;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .buttons button {
+            min-width: 120px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .buttons .book {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+        .buttons .cancel {
+            background: linear-gradient(to right, #2a5298, #1e3c72);
+        }
+        .buttons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(30,60,114,0.3);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            animation: popIn 0.5s ease-out;
+            z-index: 1001;
+        }
+        @keyframes popIn {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+        .popup-content {
+            text-align: center;
+            color: #1e3c72;
+        }
+        .popup i {
+            font-size: 50px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Logo" src="./cartoon-mechanic-clipart-3.png"/>
+   <h1>
+    RoadSide Helpers
+   </h1>
+  </div>
+  <div class="container">
+   <h2>
+    Customer Details
+   </h2>
+   <div class="form-group">
+    <label for="name">
+     <i class="fas fa-user"></i> Name:
+    </label>
+    <span id="name">
+     Prince Mangroliya
+    </span>
+   </div>
+   <div class="form-group">
+    <label for="contact">
+     <i class="fas fa-phone"></i> Contact:
+    </label>
+    <input id="contact" placeholder="Enter your contact number" type="tel"/>
+   </div>
+   <div class="form-group">
+    <label for="location">
+     <i class="fas fa-map-marker-alt"></i> Location:
+    </label>
+    <input id="location" placeholder="Enter your current location" type="text"/>
+   </div>
+   <div class="form-group">
+    <label for="service-type">
+     <i class="fas fa-cogs"></i> Service Type:
+    </label>
+    <select id="service-type" onchange="changeServiceTypeField(this)">
+     <option value="">Select Service Type</option>
+     <option value="oil-change">Oil Change</option>
+     <option value="tire-rotation">Tire Rotation</option>
+     <option value="brake-service">Brake Service</option>
+     <option value="battery-replacement">Battery Replacement</option>
+     <option value="other">Other</option>
+    </select>
+   </div>
+   <div class="form-group" id="other-service-type" style="display: none;">
+    <label for="other-service">
+     <i class="fas fa-cogs"></i> Specify Service Type:
+    </label>
+    <input id="other-service" placeholder="Enter service type" type="text"/>
+   </div>
+   <div class="buttons">
+    <button class="book" onclick="showBookingConfirmation()">
+     BOOK NOW
+    </button>
+    <button class="cancel">
+     CANCEL
+    </button>
+   </div>
+  </div>
+  <div class="popup" id="bookingPopup">
+    <div class="popup-content">
+        <i class="fas fa-check-circle"></i>
+        <h3>Booking Confirmed!</h3>
+        <p>Your service has been successfully booked.</p>
+    </div>
+  </div>
+  <script>
+    function changeServiceTypeField(select) {
+      if (select.value === "other") {
+        document.getElementById("other-service-type").style.display = "block";
+      } else {
+        document.getElementById("other-service-type").style.display = "none";
+      }
+    }
+
+    function showBookingConfirmation() {
+        const popup = document.getElementById("bookingPopup");
+        popup.style.display = "block";
+        
+        // Hide popup after 3 seconds
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 3000);
+    }
+  </script>
+ </body>
+</html>

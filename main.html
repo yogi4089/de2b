@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadSide Helpers</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f2f5 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        h1 {
+            color: #1e3c72;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 15px 0;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .option:hover {
+            border-color: #1e3c72;
+            background: rgba(30,60,114,0.05);
+            transform: translateY(-2px);
+        }
+        .option img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 3px solid #1e3c72;
+            padding: 2px;
+            background: white;
+        }
+        .option label {
+            font-size: 18px;
+            font-weight: 500;
+            color: #4a5568;
+        }
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+        .auth-button {
+            padding: 8px 15px;
+            border: 2px solid #1e3c72;
+            border-radius: 8px;
+            background: transparent;
+            color: #1e3c72;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .auth-button:hover {
+            background: #1e3c72;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RoadSide Helpers</h1>
+        <div class="option">
+            <img src="https://storage.googleapis.com/a1aa/image/9Huw3xskSsZzO5Ilet26bXgTw9ktnpaLMCfx0eEIRo9R9jQnA.jpg" alt="Icon of a user" width="50" height="50">
+            <label>User</label>
+            <div class="auth-buttons">
+                <button class="auth-button" onclick="window.location.href='loginuser.html'">Login</button>
+                <button class="auth-button" onclick="window.location.href='user registration.html'">Sign Up</button>
+            </div>
+        </div>
+        <div class="option">
+            <img src="https://storage.googleapis.com/a1aa/image/riuJtlLfCs3gUqz7lJPAudSBo9rZLfPWgLaDN8qxSgMmejQnA.jpg" alt="Icon of a mechanic" width="50" height="50">
+            <label>Mechanic</label>
+            <div class="auth-buttons">
+                <button class="auth-button" onclick="window.location.href='meclogin.html'">Login</button>
+                <button class="auth-button" onclick="window.location.href='mecsignup.html'">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
